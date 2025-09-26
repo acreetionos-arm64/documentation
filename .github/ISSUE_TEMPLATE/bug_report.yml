@@ -1,0 +1,80 @@
+name: Bug Report - documentation
+description: Report a documentation error or issue in the documentation submodule
+title: "[Bug] documentation: "
+labels: ["bug", "documentation"]
+assignees:
+  - macjunkins
+
+body:
+  - type: dropdown
+    id: bug-category
+    attributes:
+      label: Bug Category
+      options:
+        - Technical Inaccuracy
+        - Broken Cross-Reference
+        - Outdated Information
+        - Missing Information
+        - Formatting/Display Issue
+        - Link or Reference Error
+        - Inconsistent Terminology
+        - Educational Clarity Issue
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected-document
+    attributes:
+      label: Affected Document
+      options:
+        - AcreetionOS-ARM64-Architecture.md
+        - PROJECT-OVERVIEW.md
+        - MILESTONE-0-PLAN.md
+        - ROADMAP.md
+        - AcreetionOS-ARM64-Proposal.md
+        - README.md
+        - Multiple documents
+        - Other (specify in description)
+    validations:
+      required: true
+
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Issue Description
+      placeholder: |
+        Describe the documentation issue:
+        - What information is incorrect or missing?
+        - What should it say instead?
+        - How does this affect understanding or implementation?
+    validations:
+      required: true
+
+  - type: textarea
+    id: location-details
+    attributes:
+      label: Location Details
+      placeholder: |
+        Specific location of the issue:
+        - Document name and section
+        - Line numbers or headings
+        - Specific text that needs correction
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-content
+    attributes:
+      label: Expected Correct Content
+      placeholder: What should the documentation say instead?
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: validation
+    attributes:
+      label: Validation Checklist
+      options:
+        - label: I have verified this against the actual implementation
+        - label: I have checked for similar issues in other documents
+        - label: I have considered the educational impact of this issue

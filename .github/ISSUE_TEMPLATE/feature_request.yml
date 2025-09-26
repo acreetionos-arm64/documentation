@@ -1,0 +1,49 @@
+name: Feature Request - documentation
+description: Suggest new documentation or improvements to existing documentation
+title: "[Feature] documentation: "
+labels: ["enhancement", "documentation"]
+assignees:
+  - macjunkins
+
+body:
+  - type: dropdown
+    id: feature-category
+    attributes:
+      label: Documentation Category
+      options:
+        - New Technical Guide
+        - Architecture Enhancement
+        - Development Process Documentation
+        - Educational Content
+        - Cross-Reference Improvement
+        - Template or Standard
+        - Integration Documentation
+        - Community Resource
+    validations:
+      required: true
+
+  - type: textarea
+    id: documentation-need
+    attributes:
+      label: Documentation Need
+      placeholder: |
+        What documentation is needed:
+        - What topic or area needs coverage?
+        - Who would benefit from this documentation?
+        - How does this fit with existing documentation?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: milestone-alignment
+    attributes:
+      label: Milestone Alignment
+      options:
+        - Milestone 0 - Infrastructure Setup
+        - Milestone 1 - ARM64 Conversion & First ISO
+        - Milestone 2 - Bootable System & Hardware Support
+        - Milestone 3 - AcreetionOS Identity & Branding
+        - Milestone 4 - Production Release Preparation
+        - Future Enhancement (post-v1.0)
+    validations:
+      required: true

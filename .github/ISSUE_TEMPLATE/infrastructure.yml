@@ -1,0 +1,23 @@
+name: Infrastructure Issue - documentation
+description: Report documentation infrastructure, process, or maintenance issues
+title: "[Infrastructure] documentation: "
+labels: ["infrastructure", "documentation"]
+assignees:
+  - macjunkins
+
+body:
+  - type: dropdown
+    id: infrastructure-category
+    attributes:
+      label: Infrastructure Category
+      options:
+        - Documentation Process
+        - Cross-Reference Management
+        - Template or Standard Issues
+        - Review Workflow Problems
+        - Version Control Issues
+        - Link Validation Problems
+        - Documentation Build/Display
+        - Community Coordination
+    validations:
+      required: true
